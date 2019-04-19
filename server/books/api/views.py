@@ -15,5 +15,6 @@ class bookRudView(generics.RetrieveUpdateDestroyAPIView):
   resource_name       = 'books'
   lookup_field        = 'id'
   serializer_class    = bookSerializer
+
   def get_queryset(self):
     return Book.objects.all()
